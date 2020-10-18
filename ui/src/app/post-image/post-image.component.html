@@ -1,0 +1,20 @@
+<mat-card>
+  <form [formGroup]="form" (submit)="onSubmitImage()">
+    <div>
+      <button mat-stroked-button type="button" (click)="fileChooser.click()">
+        Choose Image
+      </button>
+
+      <input
+        type="file"
+        accept="image/*"
+        #fileChooser
+        (change)="onImageSelected($event)"
+      />
+    </div>
+    <div class="media-preview" *ngIf="imageURL !== '' && imageURL">
+      <img [src]="imageURL" [alt]="form.value.title" />
+    </div>
+    <button mat-raised-button color="primary" type="submit">Save image</button>
+  </form>
+</mat-card>

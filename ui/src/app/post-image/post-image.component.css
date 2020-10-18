@@ -1,0 +1,22 @@
+mat-card {
+  width: 100%;
+  margin: auto;
+}
+
+mat-form-field,
+textarea {
+  width: 100%;
+}
+
+input[type="file"] {
+  visibility: hidden;
+}
+
+.media-preview {
+  height: 20rem;
+  margin: 1rev 0;
+}
+
+.media-preview img {
+  height: 100%;
+}
