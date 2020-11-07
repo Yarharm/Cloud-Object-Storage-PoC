@@ -2,20 +2,12 @@ from django.shortcuts import render
 
 
 # Create your views here.
-def index(request):
+def angular(request):
     '''
     '''
     context = {
-        'title':'index',
+        'title':'angular',
     }
-    return render(request, 'core/index.html', context)
+    return render(request, 'core/angular.html', context)
 
 
-
-def backend(request):
-    '''
-    '''
-    context = {
-        'title': 'backend',
-    }
-    return render(request, 'core/backend.html', context)

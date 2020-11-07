@@ -20,7 +20,6 @@ from . import views
 app_name = 'core'
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('backend/', views.backend, name='backend'),
+    path('', views.angular, name='angular'),
 
 ]

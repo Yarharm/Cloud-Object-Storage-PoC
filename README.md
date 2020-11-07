@@ -55,3 +55,17 @@ python3 manage.py shell
 python3 manage.py runserver
 
 For some sweet cmdline shortcuts, run source aliases.bash from the repo root. Look inside the file to see what the shortcuts are!
+
+
+
+
+Angular
+1) Install Angular if you have not already
+npm install -g @angular/cli
+
+Angular project is already included, store within static dir
+
+To run Django iniate then python3 manage.py runserver;
+
+When new Angular components have been created, to test you must first run 'ng build' to compile and reload the code
+
