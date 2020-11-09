@@ -20,8 +20,8 @@ export class PostService {
   healthCheck(): void {
     this.httpClient
       .get<string>(`${this.DJANGO_DOMAIN}${this.HEALTH_CHECK_URL}`)
-      .subscribe((response: string) => {
-        this.healthSubject.next(response);
+      .subscribe((response: any) => {
+        this.healthSubject.next(response.health);
       });
   }
 }
