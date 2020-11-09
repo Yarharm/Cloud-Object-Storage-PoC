@@ -1,13 +1,5 @@
-from django.shortcuts import render
+from django.http import JsonResponse
 
 
-# Create your views here.
-def angular(request):
-    '''
-    '''
-    context = {
-        'title':'angular',
-    }
-    return render(request, 'core/angular.html', context)
-
-
+def health(request):
+    return JsonResponse({'health': 'Django is healthy'})
