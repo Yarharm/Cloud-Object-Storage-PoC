@@ -20,6 +20,5 @@ from . import views
 app_name = 'core'
 
 urlpatterns = [
-    path('', views.angular, name='angular'),
-
+    path('health', views.health, name='health'),
 ]
