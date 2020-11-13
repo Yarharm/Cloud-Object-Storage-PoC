@@ -169,3 +169,5 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = os.path.join(VENV_DIR, 'static')
 MEDIA_ROOT = os.path.join(VENV_DIR, 'media')
+
+AWS_BUCKET_NAME = 'soen387bucket'
