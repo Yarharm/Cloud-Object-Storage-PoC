@@ -1,0 +1,13 @@
+.post {
+  width: 400px;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+mat-paginator {
+  margin-top: 1rem;
+}
