@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { PostService } from '../http-service/post.service';
 
 @Component({
   selector: 'app-post-image',
@@ -7,6 +8,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./post-image.component.css'],
 })
 export class PostImageComponent implements OnInit {
+  constructor(private readonly postService: PostService) {}
   form: FormGroup;
   imageURL: string;
 
@@ -19,7 +21,8 @@ export class PostImageComponent implements OnInit {
   }
 
   onSubmitImage(): void {
-    // Send request to appropriate endpoint
+    this.postService.addPost(this.form.value.media);
+    this.form.reset();
   }
 
   onImageSelected(event: Event): void {

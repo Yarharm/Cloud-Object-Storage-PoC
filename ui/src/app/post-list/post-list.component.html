@@ -1,1 +1,4 @@
 <p>{{ health }}</p>
+<mat-card class="post" *ngFor="let postUrl of posts">
+  <img mat-card-image [src]="postUrl" alt="No image available" />
+</mat-card>
