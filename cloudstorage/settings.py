@@ -26,8 +26,9 @@ SECRET_KEY = 'p-7jr@76bad&r8y#fk!4on7j52!_c^vo56k!c!=6cl=ta8aor6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
 
+ALLOWED_HOSTS = ['*']
+CORS_ORIGIN_ALLOW_ALL = True
 
 LOGGING = {
     'version': 1,
@@ -71,6 +72,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core.apps.CoreConfig',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -81,6 +83,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'cloudstorage.urls'
