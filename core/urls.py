@@ -21,4 +21,5 @@ app_name = 'core'
 
 urlpatterns = [
     path('health', views.health, name='health'),
+    path('aws_post', views.aws_post, name='aws_post'),
 ]
