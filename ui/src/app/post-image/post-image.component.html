@@ -1,5 +1,14 @@
 <mat-card>
   <form [formGroup]="form" (submit)="onSubmitImage()">
+    <mat-form-field appearance="fill">
+      <mat-label>Cloud provider</mat-label>
+      <select matNativeControl formControlName="provider">
+        <option value="" selected></option>
+        <option *ngFor="let car of providers" [value]="car.value">
+          {{ car.viewValue }}
+        </option>
+      </select>
+    </mat-form-field>
     <div>
       <button mat-stroked-button type="button" (click)="fileChooser.click()">
         Choose Image

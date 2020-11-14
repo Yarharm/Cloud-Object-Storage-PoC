@@ -11,9 +11,17 @@ export class PostImageComponent implements OnInit {
   constructor(private readonly postService: PostService) {}
   form: FormGroup;
   imageURL: string;
+  providers: any[] = [
+    { value: 'aws', viewValue: 'aws' },
+    { value: 'gcp', viewValue: 'gcp' },
+  ];
+  selectedProvider: string;
 
   ngOnInit(): void {
     this.form = new FormGroup({
+      provider: new FormControl(null, {
+        validators: [Validators.required],
+      }),
       media: new FormControl(null, {
         validators: [Validators.required],
       }),
@@ -21,7 +29,11 @@ export class PostImageComponent implements OnInit {
   }
 
   onSubmitImage(): void {
-    this.postService.addPost(this.form.value.media);
+    if (this.form.value.provider === 'aws') {
+      this.postService.postAWS(this.form.value.media);
+    } else {
+      this.postService.postGCP(this.form.value.media);
+    }
     this.form.reset();
   }
 
