@@ -15,7 +15,7 @@ export class PostService {
   private DJANGO_DOMAIN = 'http://127.0.0.1:8000/';
   private HEALTH_CHECK_URL = 'health';
   private AWS_POST_URL = 'aws_post';
-  private GCP_POST_URL = '';
+  private GCP_POST_URL = 'gcp_post';
 
   private healthSubject = new Subject<string>();
   private postSubject = new Subject<string>();
