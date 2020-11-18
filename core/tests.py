@@ -13,8 +13,11 @@ def listTest():
 def uploadTest():
 	storage_client = storage.Client()
 	bucket = storage_client.bucket("soen387gcp")
-	blob = bucket.blob("filename")
-	blob.upload_from_filename("../1.png")
+	#what the file will be named in the bucket
+	blob = bucket.blob("test")
+	print(blob)
+	#use and file here
+	print(blob.upload_from_filename("../test.png"))
 
 uploadTest()
 
