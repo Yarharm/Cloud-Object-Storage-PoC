@@ -69,3 +69,23 @@ To run Django iniate then python3 manage.py runserver;
 
 When new Angular components have been created, to test you must first run 'ng build' to compile and reload the code
 
+
+To login to GCP go to google cloud console
+login using
+
+soen387con@gmail.com
+
+Soen123!
+
+
+Search in the top view bar Storages
+view bucket in storages
+
+To ensure you are running make sure to reinstall pip and get the storages reference.
+
+The file should currently link to the json key automatically but if it does not make sure to run
+export GOOGLE_APPLICATION_CREDENTIALS="../soen387-904e0e665452.json"
+
+Currently the system shouldpsot a file tp gcp as a blob aswell as return a list/link to all files within the bucket
+
+

@@ -20,6 +20,8 @@ from . import views
 app_name = 'core'
 
 urlpatterns = [
-    path('health', views.health, name='health'),
     path('aws_post', views.aws_post, name='aws_post'),
+    path('gcp_post', views.gcp_post, name='gcp_POST'),
+    path('gcp_get', views.gcp_get, name='gcp_get'),
+
 ]
